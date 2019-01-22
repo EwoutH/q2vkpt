@@ -4,13 +4,4 @@ jobs:
   include:
    - name: "Make GCC"
      compiler: gcc
-     script: make
-   - name: "Make Clang"
-     compiler: clang
-     script: make
-   - name: "Make test GCC"
-     compiler: gcc
-     script: make test
-   - name: "Make GCC"
-     compiler: clang
-     script: make test
+     script: make .config

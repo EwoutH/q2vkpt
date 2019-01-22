@@ -1,5 +1,19 @@
 language: cpp
-
-script:
- - make
- - make test
+ 
+ jobs:
+   include:
+   - name: "Make GCC"
+     compiler: gcc
+     script: make
+   include:
+   - name: "Make Clang"
+     compiler: clang
+     script: make
+   include:
+   - name: "Make test GCC"
+     compiler: gcc
+     script: make test
+   include:
+   - name: "Make GCC"
+     compiler: clang
+     script: make test

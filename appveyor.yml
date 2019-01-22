@@ -1,0 +1,17 @@
+image: Visual Studio 2017
+configuration: Release
+
+before_build:
+- cmd: |-
+    cd %APPVEYOR_BUILD_FOLDER%
+    mkdir cmake_build
+    cd cmake_build
+    cmake --version
+#    cmake c:\projects\q2vkpt
+    
+build_script:
+  cmake build --release
+ 
+artifacts:
+ - path: \**\*q2vkpt*.exe
+ - path: \**\*q2vkpt*.lib

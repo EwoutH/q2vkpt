@@ -1,6 +1,6 @@
 ### Q2PRO Makefile ###
 
-# -include .config
+-include .config
 
 
 ifdef CONFIG_WINDOWS
@@ -689,6 +689,7 @@ DEPS_g := $(OBJS_g:.o=.d)
 
 ifdef CONFIG_VKPT_RENDERER
 $(TARG_c): $(VKPT_SHADER_SPV)
+
 compile_shaders: $(VKPT_SHADER_SPV)
 
 CONFIG_GLSLANGVALIDATOR ?= glslangValidator

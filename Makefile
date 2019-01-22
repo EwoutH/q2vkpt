@@ -1,6 +1,6 @@
 ### Q2PRO Makefile ###
 
--include .config
+# -include .config
 
 
 ifdef CONFIG_WINDOWS

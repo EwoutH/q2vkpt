@@ -2,6 +2,15 @@ language: cpp
  
 jobs:
   include:
-   - name: "Make GCC"
+   - name: "make all (GCC)"
      compiler: gcc
-     script: make .config
+     script: make
+   - name: "make all (Clang)"
+     compiler: clang
+     script: make
+   - name: "make compile_shaders (GCC)"
+     compiler: gcc
+     script: make compile_shaders
+   - name: "make compile_shaders (Clang)"
+     compiler: clang
+     script: make compile_shaders

@@ -7,10 +7,9 @@ before_build:
     mkdir cmake_build
     cd cmake_build
     cmake --version
-#    cmake c:\projects\q2vkpt
-    
+
 build_script:
-  cmake build --release
+  cmake c:\projects\q2vkpt
  
 artifacts:
  - path: \**\*q2vkpt*.exe

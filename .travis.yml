@@ -1,16 +1,13 @@
 language: cpp
+
+os:
+ - windows
+ - linux
+ - osx
  
 jobs:
   include:
-   - name: "make all (GCC)"
-     compiler: gcc
+   - name: "make $os"
      script: make
-   - name: "make all (Clang)"
-     compiler: clang
-     script: make
-   - name: "make compile_shaders (GCC)"
-     compiler: gcc
-     script: make compile_shaders
-   - name: "make compile_shaders (Clang)"
-     compiler: clang
+   - name: "make compile_shaders $os"
      script: make compile_shaders
